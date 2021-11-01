@@ -6,15 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello Vue</title>
-  <script src="./src/app.js" defer></script>
   <script src="https://unpkg.com/vue@next"></script>
-
 </head>
 
 <body>
   <div id="app">
-    <p>Meu nome é: {{name}} e tenho {{age}} anos.</p>
+    <form id="app-form">
+      <input type="text" v-model="input_name" placeholder="Digite o seu nome">
+      <input type="submit" value="Enviar" v-on:click="submitForm">
+
+    </form>
+    <p>Meu nome é: {{name}}</p>
+    <p>Data binding: {{input_name}}</p>
   </div>
+
+  <script src="./src/app.js"></script>
+
 </body>
 
 </html>
