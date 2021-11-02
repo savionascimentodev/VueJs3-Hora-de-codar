@@ -40,3 +40,40 @@
 - Ou seja, criamos uma **árvore de componentes**;
 - Precisamos tomar cuidado para isso não virar uma bagunça;
 - Com essa divisão de componentes em subcomponentes, separamos mais ainda as responsabilidades de cada um dos componentes;
+
+---
+
+### Diretivas
+
+- Existe várias **diretivas** no Vue;
+- Por exemplo: **v-if**;
+- Pode mudar a exibição de uma parte do layout, baseada em uma condição;
+- **As diretivas são essenciais** para uma aplicação dinâmica;
+- Podemos alterar a lógica pelos valores inseridos em data;
+
+---
+
+### Argumentos
+
+- Os **argumentos são valores dinâmicos** que podem ser inseridos em:
+- **Diretivas**: baseados nestes valores para executar um determinado comportamento;
+- **Atributos**: mudar URL de links ou SRC de imagens;
+- Essenciais para alterar a experiência do usuário no uso da aplicação;
+
+---
+
+### Métodos
+
+- Os **métodos** do Vue são como **funções**;
+- Podemos **executá-los baseados em eventos** ou por alguma lógica da aplicação.
+- Eles ficam em um objeto chamado **methods**;
+- Onde criamos as funções que posrteriormente serão executadas;
+
+---
+
+### Css Global e Scoped
+
+- O **CSS** no Vue pode ser dividido em duas categorias:
+- **Global**: Onde definimos no App, por exemplo e se aplica a todos os elementos;
+- **Scoped**: Onde cada componente poder ter seu estilo, deixando maisfácil de personalizar os elementos;
+- Geralmente utiliza-se para estilizar os componentes individualmente;
