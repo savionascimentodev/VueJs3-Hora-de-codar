@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Está é a descrição da pessoa: {{ nome }}</h2>
+    <h2>Está é a descrição da pessoa: {{ name }}</h2>
     <Info />
   </section>
 </template>
