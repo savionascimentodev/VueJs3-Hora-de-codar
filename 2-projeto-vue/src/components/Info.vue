@@ -2,11 +2,17 @@
   <section>
     <p v-if="isWorking">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de trabalho</p>
-    <p>Utilizo as seguintes tecnologias:</p>
+    <p>Utilizo as seguintes tecnologias para back-end:</p>
     <ul>
-      <li>JavaScript</li>
-      <li>Vue</li>
-      <li>MySql</li>
+      <li v-for="(technology, index) in backendTechnologies" :key="index">
+        {{ technology }}
+      </li>
+    </ul>
+    <p>Utilizo as seguintes tecnologias para front-end</p>
+    <ul>
+      <li v-for="technology in frontendTechnologies" :key="technology.id">
+        {{ technology.language }}
+      </li>
     </ul>
     <div>
       <button @click="showEmailClick">Mostrar e-mail</button>
@@ -31,7 +37,13 @@ export default {
       isWorking: true,
       showEmail: false,
       email: 'savionascimentodev@gmail.com',
-      meuLink: 'https://github.com/savionascimentodev'
+      meuLink: 'https://github.com/savionascimentodev',
+      backendTechnologies: ['JavaScript', 'Node', 'MySql'],
+      frontendTechnologies: [
+        { id: 1, language: 'HTML' },
+        { id: 2, language: 'CSS' },
+        { id: 3, language: 'VUE' }
+      ]
     }
   },
   methods: {
