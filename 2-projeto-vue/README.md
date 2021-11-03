@@ -77,3 +77,30 @@
 - **Global**: Onde definimos no App, por exemplo e se aplica a todos os elementos;
 - **Scoped**: Onde cada componente poder ter seu estilo, deixando maisfácil de personalizar os elementos;
 - Geralmente utiliza-se para estilizar os componentes individualmente;
+
+---
+
+### Renderização de listas
+
+- As listas (**arrays**) serão renderizados por **diretivas**;
+- Utilizaremos o **v-for** para isso;
+- O dado pode vir de **data**, como um array;
+- E cada item pode ser impresso **junto do HTML**;
+
+---
+
+### Eventos
+
+- Os **eventos** sãu utilizados para complementar ações dos usuários com ativações de métodos;
+- Existe diversos tipos de eventos em Vue, como o click: **@click**;
+- Que podem ser **adicionados diretamente a elementos HTML**;
+- O evento recebe um "parâmetro" que é o método que será executado;
+
+---
+
+### Múltiplos eventos
+
+- O vue também permite a entrada de **mútiplos eventos** em um único evento;
+- A sintaxe permane a mesma;
+- Porém vamos **separar os eventos por vírgula**
+- Isso permite **executar dois ou mais métodos com um click**, por exemplo;
