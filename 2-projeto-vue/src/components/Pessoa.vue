@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>Está é a descrição da pessoa: {{ name }}</h2>
-    <Info />
+    <Info :email="email" />
   </section>
 </template>
 
@@ -13,7 +13,8 @@ export default {
   components: { Info },
   data() {
     return {
-      name: 'Sávio'
+      name: 'Sávio',
+      email: 'savionascimentodev@gmail.com'
     }
   }
 }

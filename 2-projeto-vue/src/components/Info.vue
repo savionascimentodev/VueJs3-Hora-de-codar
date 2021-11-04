@@ -1,5 +1,6 @@
 <template>
   <section>
+    <p>{{ compEmail }} - {{ email }}</p>
     <p v-if="isWorking">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de trabalho</p>
     <p>Utilizo as seguintes tecnologias para back-end:</p>
@@ -32,11 +33,13 @@ import Picture from './Picture.vue'
 export default {
   name: 'Info',
   components: { Picture },
+  props: {
+    email: String
+  },
   data() {
     return {
       isWorking: true,
       showEmail: false,
-      email: 'savionascimentodev@gmail.com',
       meuLink: 'https://github.com/savionascimentodev',
       backendTechnologies: ['JavaScript', 'Node', 'MySql'],
       frontendTechnologies: [
