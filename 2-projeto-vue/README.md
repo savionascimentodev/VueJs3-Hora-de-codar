@@ -104,3 +104,20 @@
 - A sintaxe permane a mesma;
 - Porém vamos **separar os eventos por vírgula**
 - Isso permite **executar dois ou mais métodos com um click**, por exemplo;
+
+---
+
+### Passar dados com props
+
+- **Os componentes do Vue podem receber dados**, e este recurso é chamado de **Props**;
+- As props podem ser passadas por **valores do data**, como também podemos **inserir diretamente** eles;
+- **Precisamos declarar as propriedades recebidas pelos componentes**, em um array ou objeto chamado props;
+
+---
+
+### Ouvindo eventos com $Emit
+
+- Utilizando o **$emit** é possivel ouvir um eveno de um componente filho em um componente pai;
+- Com isso, **podemos ativar comportamentos (como métodos)** no componente pai;
+- **O evento deve ser registrado** no componente;
+- E é preciso definir o que será feito com a ativação do evento na chamada do componente;
