@@ -1,3 +1,13 @@
+## Projeto 2
+
+Aulas sobre como utlizar o vue:
+
+- Como criar componentes;
+- Emitir eventos e passar dados de um componente pai para um filho,;
+- Utilizar props;
+- Diretivas,
+- Css Scoped e global;
+
 ### CLI Vue
 
 - O **CLI** é uma ferramenta de linha de comando do Vue;
@@ -55,12 +65,7 @@
 
 ### Argumentos
 
-- Os **argumentos são valores dinâmicos** que podem ser inseridos em:
-- **Diretivas**: baseados nestes valores para executar um determinado comportamento;
-- **Atributos**: mudar URL de links ou SRC de imagens;
-- Essenciais para alterar a experiência do usuário no uso da aplicação;
-
----
+- Os **argumentos são valores dinâmicos** que podem ser inseridos em <script src="https://unpkg.com/vue@next"></script>
 
 ### Métodos
 

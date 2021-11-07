@@ -1,3 +1,7 @@
+## Projeto 1
+
+- Utilizando o vue js sem uma cli e vendo suas funções e dificuldades.
+
 ### O que é Vue?
 
 - Um **framework progressivo** para criar interfaces;
