@@ -2,7 +2,7 @@
   <section>
     <Banner />
     <div class="main-container">
-      <h1>Monte o seu banner</h1>
+      <h1>Monte o seu Burger</h1>
       <BurguerForm />
     </div>
   </section>

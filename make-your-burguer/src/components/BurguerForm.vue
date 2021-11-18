@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>Componente de mensagem</p>
+    <Message :msg="message" v-show="message" />
     <div>
-      <form id="burger-form">
+      <form id="burger-form" @submit="createBurguer">
         <div class="input-container">
           <label for="name"> Nome do cliente: </label>
           <input
@@ -17,44 +17,37 @@
           <label for="bread"> Escolha o pão: </label>
           <select name="bread" id="bread" v-model="bread">
             <option value="">Selecione o seu pão</option>
-            <option value="integral">Integral</option>
+            <option v-for="bread in breads" :key="bread.id" :value="bread.tipo">
+              {{ bread.tipo }}
+            </option>
           </select>
         </div>
         <div class="input-container">
           <label for="meat"> Escolha a carne do seu burguer: </label>
           <select name="meat" id="meat" v-model="meat">
             <option value="">Selecione o tipo de carne</option>
-            <option value="maminha">Maminha</option>
+            <option v-for="meat in meats" :key="meat.id" :value="meat.tipo">
+              {{ meat.tipo }}
+            </option>
           </select>
         </div>
         <div id="options-container" class="input-container">
           <label id="options-title" for="options">
             Selecione os opcionais:
           </label>
-          <div class="checkbox-container">
+          <div
+            v-for="option in optionsData"
+            :key="option.id"
+            class="checkbox-container"
+          >
             <input
               type="checkbox"
-              name="options"
+              name="opcionais"
               v-model="options"
-              value="Salame"
+              :value="option.tipo"
             />
-            <span>Salame</span>
+            <span>{{ option.tipo }}</span>
             <br />
-            <input
-              type="checkbox"
-              name="options"
-              v-model="options"
-              value="Salame"
-            />
-            <span>Salame</span>
-            <br />
-            <input
-              type="checkbox"
-              name="options"
-              v-model="options"
-              value="Salame"
-            />
-            <span>Salame</span>
           </div>
         </div>
         <div class="input-container">
@@ -66,10 +59,69 @@
 </template>
 
 <script>
+import Message from './Message.vue'
+
 export default {
   name: 'BurguerForm',
+  components: {
+    Message
+  },
   data() {
-    return {}
+    return {
+      breads: null,
+      meats: null,
+      optionsData: null,
+      name: null,
+      bread: null,
+      meat: null,
+      options: [],
+      status: 'Solicitado',
+      message: null
+    }
+  },
+  methods: {
+    async getIngredients() {
+      const req = await fetch('http://localhost:3000/ingredientes')
+      const data = await req.json()
+
+      this.breads = data.paes
+      this.meats = data.carnes
+      this.optionsData = data.opcionais
+    },
+    async createBurguer(e) {
+      e.preventDefault()
+
+      const data = {
+        name: this.name,
+        meat: this.meat,
+        bread: this.bread,
+        options: Array.from(this.options),
+        status: 'Solicitado'
+      }
+
+      const dataJson = JSON.stringify(data) // Manda como texto para o servidor;
+      const req = await fetch('http://localhost:3000/burgers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: dataJson
+      })
+
+      // Limpar os campos;
+      const res = await req.json()
+      this.name = ''
+      this.meat = ''
+      this.bread = ''
+      this.options = ''
+
+      // Colocando mensagem de sistema;
+      this.message = `Pedido Nº ${res.id} realizado comm sucesso!`
+
+      // Limpar mensagem;
+      setTimeout(() => (this.message = ''), 3000)
+    }
+  },
+  mounted() {
+    this.getIngredients()
   }
 }
 </script>
