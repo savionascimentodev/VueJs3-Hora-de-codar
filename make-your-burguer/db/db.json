@@ -111,60 +111,6 @@
       ],
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "name": "Jonas",
-      "meat": "Veggie burger",
-      "bread": "Parmesão e Orégano",
-      "options": [
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "name": "Jonas",
-      "meat": "Veggie burger",
-      "bread": "Parmesão e Orégano",
-      "options": [
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "name": "Leandro",
-      "meat": "Maminha",
-      "bread": "Italiano Branco",
-      "options": [],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "name": "Jonas",
-      "meat": "Maminha",
-      "bread": "3 Queijos",
-      "options": [],
-      "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "name": "Leandro",
-      "meat": "Maminha",
-      "bread": "Italiano Branco",
-      "options": [],
-      "status": "Solicitado",
-      "id": 8
-    },
-    {
-      "name": "Daiane",
-      "meat": "Alcatra",
-      "bread": "Integral",
-      "options": [],
-      "status": "Solicitado",
-      "id": 9
     }
   ]
 }
