@@ -79,35 +79,12 @@
   ],
   "burgers": [
     {
-      "name": "Sávinho",
-      "meat": "Maminha",
+      "name": "Marcos",
+      "meat": "Alcatra",
       "bread": "Italiano Branco",
       "options": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "name": "Leandro",
-      "meat": "Veggie burger",
-      "bread": "Parmesão e Orégano",
-      "options": [
-        "Salame",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "name": "Jonas",
-      "meat": "Veggie burger",
-      "bread": "Parmesão e Orégano",
-      "options": [
-        "Tomate",
-        "Cebola roxa"
+        "Cebola roxa",
+        "Pepino"
       ],
       "status": "Solicitado",
       "id": 3
